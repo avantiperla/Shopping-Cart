@@ -9,6 +9,7 @@ import Women from "./Pages/Women";
 import {Toaster} from 'sonner'
 import AddDetails from "./Pages/AddDetails";
 import { CartProvider } from "./Pages/ContextReducer";
+import SuccessPage from "./Pages/SuccessPage";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/productDetails" element={<ProductDetails/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/product" element={<AddDetails/>}/>
+          <Route path="/orderSuccessful" element={<SuccessPage/>}/>
           
         </Routes>    
 

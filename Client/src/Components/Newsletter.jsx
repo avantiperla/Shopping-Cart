@@ -33,8 +33,8 @@ const Newsletter = () => {
     
     return (
         <div className='w-full bg-gray-800/5 min-h-[40vh] py-10'>
-            <p className=' text-center text-xs md:text-base pt-8 tracking-normal font-medium text-slate-700'>Join our newsletter and get 10% off your first order</p>
-            <h1 className=' text-center text-xs tracking-normal pt-5 text-slate-600'>Plus, receive exclusive offers, product news, tips and guides to help you grow in dressing confidence</h1>
+            <p className=' text-center text-xs md:text-lg pt-8 tracking-normal font-medium text-slate-700'>Join our newsletter and get 10% off your first order</p>
+            <h1 className=' text-center text-base tracking-normal pt-5 text-slate-600'>Plus, receive exclusive offers, product news, tips and guides to help you grow in dressing confidence</h1>
 
             <form onSubmit={handleSubmit} className='flex justify-center gap-2 mt-9'>
                 <input onChange={e=>setEmail(e.target.value)} type='email' value={email} placeholder='Enter Email' className=' py-2 px-4 text-sm focus:outline-none border-2 border-gray-200' required></input>

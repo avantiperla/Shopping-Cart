@@ -15,7 +15,7 @@ const ProductDetails = () => {
 
 
     const handleSubmit= async()=>{
-        await dispatch({type:"ADD", id:location.state._id,name:location.state.name,image:location.state.image,price:location.state.price})
+        await dispatch({type:"ADD", id:location.state._id,name:location.state.name,description:location.state.description,price:location.state.price})
         console.log(data);
     }
     return (

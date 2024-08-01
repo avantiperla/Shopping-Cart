@@ -2,28 +2,26 @@ import React from 'react'
 import { products } from '../data'
 import WomenCard from '../Components/WomenCard'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
+
+
+
 const Women = () => {
     const [allProducts, setAllProducts] = useState([])
 
     useEffect(() => {
         getAllProducts();
-      }, [])
-      const getAllProducts = () => {
-        fetch("http://localhost:5000/api/getAllProducts", {
-          method: "GET",
-        }).then((res) => res.json())
-          .then((data) => {
-            // console.log(data, "products");
-            setAllProducts(data.data)
-            // console.log(allProducts);
-            // const all = allProducts.slice(0,3)
-            // console.log(all);
-            // setRequireProduct(requireProduct.push(all))
-            // console.log(requireProduct);
-          })
-      }
-      // use context
-      // use reducer
+    }, [])
+      
+
+      const getAllProducts = async () => {
+        try {
+          const response = await axios.get("http://localhost:5000/api/getAllProducts");
+          setAllProducts(response.data.data);
+        } catch (error) {
+          console.error("Error fetching products", error);
+        }
+      };
     
   return (
     <div className='md:pt-40 min-h-[90vh] w-full md:max-w-7xl max-w-sm mx-auto pt-12 '>
@@ -38,7 +36,7 @@ const Women = () => {
         </div>
 
         {
-        <div className='grid md:grid-cols-4 gap-1'>
+        <div className='grid md:grid-cols-4 gap-1 mb-10'>
           {
             allProducts.map((product)=>{
                 // console.log(product);

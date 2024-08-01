@@ -20,7 +20,7 @@ const Home = () => {
 
       <Cards2/>
       
-      <Newsletter/>
+      {/* <Newsletter/> */}
       
 
     </div>

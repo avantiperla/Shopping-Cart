@@ -9,22 +9,22 @@ const ClothingForAll = () => {
         <div className=' pt-12'>
             <div className='grid md:grid-cols-2 grid-cols-1'>
                 <div className='relative bg-yellow-200'>
-                    <img src='../Clothing1.jpg' className='h-[50vh] md:h-[80vh] w-full'></img>
+                    <img src='../image1.png' className='h-[50vh] md:h-[80vh] w-full'></img>
                     <h1 className='text-white absolute left-[30%] top-[45%] text-2xl md:text-4xl font-medium'>COMFORT WEAR</h1>
                 </div>
 
                 <div className='relative'>
-                    <img src='../Clothing2.jpg' className=' h-[50vh] md:h-[80vh] w-full'></img>
+                    <img src='../image2.png' className=' h-[50vh] md:h-[80vh] w-full'></img>
                     <h1 className='text-white absolute left-[30%] top-[45%] text-2xl md:text-4xl font-medium'>EASY ACCESS CLOTHING</h1>
                 </div>
 
                 <div className='relative'>
-                    <img src='../Clothing3.jpg' className='h-[50vh] md:h-[80vh] w-full'></img>
+                    <img src='../image3.png' className='h-[50vh] md:h-[80vh] w-full'></img>
                     <h1 className='text-white absolute  left-[30%] top-[45%] text-2xl md:text-4xl font-medium'>SEATED WEAR</h1>
                 </div>
 
                 <div className='relative'>
-                    <img src='../Clothing4.jpg' className='h-[50vh] md:h-[80vh] w-full'></img>
+                    <img src='../Images/jpeg-optimizer_image5.jpg' className='h-[50vh] md:h-[80vh] w-full'></img>
                     <h1 className='text-white absolute  left-[30%] top-[45%] text-2xl md:text-4xl font-medium'>EASY CLOSURE</h1>
                 </div>
             </div>

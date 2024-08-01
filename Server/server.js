@@ -19,8 +19,8 @@ dbConnect()
 app.use(express.json())
 app.use(cors())
 
-app.use(bodyParser.json({ limit: '70mb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '70mb' }));
+app.use(bodyParser.json({ limit: '700mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '700mb' }));
 
 
 // starting the server
@@ -51,12 +51,19 @@ app.post("/api/newsletter", async (req, res) => {
 
             console.log(newEmail);
 
-            const text = "Thank you!"
+            const text = `Dear User,
 
-            await sendEmail(newEmail.email, "Verify Email", text)
+Thank you for signing up for the BOMBUS newsletter! We are thrilled to have you on board.
 
-            res.json("Mail sent")
-        }
+Stay tuned for the latest updates, exclusive offers, and much more.
+
+Best regards,
+The BOMBUS Team`
+
+        await sendEmail(newEmail.email, "Welcome to BOMBUS!", text)
+
+        res.json("Mail sent")
+    }
 
         
     }

@@ -8,10 +8,15 @@ const reducer = (state,action)=>{
     switch (action.type) {
         case "ADD":
             
-            return [...state,{id:action.id,name:action.name,image:action.image,price:action.price}];
-    
+            return [...state,{id:action.id,name:action.name,description:action.description,price:action.price}];
+        
+        case "REMOVE":
+            let newArr = [...state]
+            newArr.splice(action.index, 1)
+            return newArr
+
         default:
-            console.log("Error in reducer");;
+            console.log("Error in reducer");
     }
 }
 export const CartProvider = ({children})=>{
